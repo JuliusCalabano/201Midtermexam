@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | My Personal Profile</title>
+
+    <style>
+        /* =========================
+           PAGE BACKGROUND
+           ========================= */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("./background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+           ========================= */
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+           ========================= */
+
+        .navbar {
+            background-color: #142850;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ffd966;
+            text-decoration: underline;
+        }
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #1e3c72;
+            border: 2px solid #142850;
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            color: #dbeafe;
+            font-size: 1.1em;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HOME / PROFILE SECTION
+           ========================= */
+
+        .profile {
+            width: 100%;
+            margin: 20px auto;
+            padding: 25px;
+
+            background: linear-gradient(to right, blue, lightblue);
+            border: 2px solid #2a5298;
+            border-radius: 15px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* LEFT SIDE: PROFILE */
+
+        .profile-left {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            min-width: 0;
+        }
+
+        .profile-left img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid #2a5298;
+            border-radius: 50%;
+        }
+
+        .profile-left h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .profile-left h3 {
+            color: rgb(60, 60, 60);
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* RIGHT SIDE: PERSONAL INFORMATION */
+
+        .profile-right {
+            flex: 2;
+            min-width: 0;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        .profile-right h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 10px;
+        }
+
+        .profile-right p {
+            color: #333333;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+            word-spacing: 2px;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(30, 59, 114, 0.388);
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .navbar {
+                gap: 20px;
+                padding: 15px 10px;
+            }
+
+            .navbar a {
+                font-size: 0.95rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .profile {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .profile-left,
+            .profile-right {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .profile-left img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVIGATION BAR -->
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>My Personal Profile</h1>
+
+            <p>
+                Welcome to my personal webpage!
+            </p>
+
+        </div>
+
+        <!-- HOME / PROFILE SECTION -->
+
+        <div class="profile">
+
+            <!-- LEFT SIDE: PROFILE -->
+
+            <div class="profile-left">
+
+                <img src="./AI_PassportSize.png"
+                     alt="My Profile Picture">
+
+                <h2>Julius Calabano</h2>
+
+                <h3>
+                    BS Information Technology Student
+                </h3>
+
+            </div>
+
+            <!-- RIGHT SIDE: INFORMATION -->
+
+            <div class="profile-right">
+
+                <h2>Personal Information</h2>
+
+                <p>
+                    Hello! My name is Julius Calabano.
+                    I am an Information Technology student
+                    who enjoys learning about computers,
+                    programming, and web development.
+                </p>
+
+                <p>
+                    I am currently developing my skills in
+                    HTML, CSS, JavaScript, and database
+                    management. I enjoy creating websites
+                    and learning how technology can solve
+                    real-world problems.
+                </p>
+
+                <p>
+                    My goal is to improve my programming
+                    skills and develop useful, responsive,
+                    and user-friendly websites and applications.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>
+                Created by: Julius Calabano<br>
+                Date: September 2026
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

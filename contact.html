@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | My Personal Profile</title>
+
+    <style>
+        /* =========================
+           PAGE BACKGROUND
+           ========================= */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("./background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+           ========================= */
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+           ========================= */
+
+        .navbar {
+            background-color: #142850;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ffd966;
+            text-decoration: underline;
+        }
+
+        .navbar a.active {
+            color: #ffd966;
+            border-bottom: 2px solid #ffd966;
+            padding-bottom: 5px;
+        }
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #1e3c72;
+            border: 2px solid #142850;
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            color: #dbeafe;
+            font-size: 1.1em;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CONTACT SECTION
+           ========================= */
+
+        .contact {
+            width: 100%;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #f5f5f5;
+            border: 2px solid #cccccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        /* =========================
+           FLEXBOX LAYOUT
+           ========================= */
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 25px;
+        }
+
+        /* LEFT SIDE */
+
+        .contact-info {
+            flex: 1;
+            padding: 20px;
+            background-color: #dbeafe;
+            border: 2px solid #2a5298;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
+        .contact-info h2 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-info p {
+            color: #333333;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* RIGHT SIDE */
+
+        .contact-form {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff4cc;
+            border: 2px solid #e6be32;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
+        .contact-form h2 {
+            color: #8a6500;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999999;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #2a5298;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(30, 60, 114, 0.8);
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .navbar {
+                gap: 20px;
+                padding: 15px 10px;
+            }
+
+            .navbar a {
+                font-size: 0.95rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .contact {
+                padding: 15px;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVIGATION BAR -->
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html" class="active">Contact</a>
+
+        </nav>
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>Contact Me</h1>
+
+            <p>
+                My contact information and message form.
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT SECTION -->
+
+        <div class="contact">
+
+            <div class="contact-container">
+
+                <!-- LEFT SIDE: CONTACT INFORMATION -->
+
+                <div class="contact-info">
+
+                    <h2>Contact Information</h2>
+
+                    <p>
+                        <strong>Name:</strong><br>
+                        Julius Calabano
+                    </p>
+
+                    <p>
+                        <strong>Course:</strong><br>
+                        BS Information Technology
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong><br>
+                        Philippines
+                    </p>
+
+                    <p>
+                        <strong>Field of Interest:</strong><br>
+                        Information Technology and Web Development
+                    </p>
+
+                </div>
+
+                <!-- RIGHT SIDE: SOCIAL MEDIA -->
+
+                <div class="contact-form">
+
+                    <h2>Connect With Me</h2>
+
+                    <p>
+                        <strong>Email Address:</strong><br>
+                        <a href="https://mail.google.com/">yourname@example.com</a>
+                    </p>
+
+                    <p>
+                        <strong>Facebook:</strong><br>
+                        <a href="https://facebook.com/">Julius Calabano</a>
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong><br>
+                        <a href="https://github.com/">JuliusCalabano</a>
+                    </p>
+
+                    <p>
+                        <strong>Availability:</strong><br>
+                        Open to learning and collaborating on web development projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>
+                Created by: Julius Calabano<br>
+                Date: September 2026
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

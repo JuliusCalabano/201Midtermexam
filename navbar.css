@@ -1,0 +1,28 @@
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+.navbar {
+    background-color: #142850;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffd966;
+    text-decoration: underline;
+}
